@@ -76,3 +76,45 @@
         transform: rotateX(360deg) rotateY(360deg);
     }
 }
+.prompt{
+    height: 50px;
+    width: 200px;
+    list-style: none;
+    background-color: aqua;
+}
+.prompt p{
+    line-height: 50px;
+    text-align: center;
+}
+.jt{
+    border-width: 40px 0 40px 50px;
+    border-style: solid;
+    border-color: transparent transparent transparent aqua;
+}
+.fixed{
+    animation: myprompt 4s ease;
+    position: fixed;
+    left: -200px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    transition: 1.5s;
+}
+@keyframes myprompt{
+    0%{
+        left: -200px;
+    }
+    50%{
+        left: 0;
+        color: #fff;
+    }
+    100%{
+        left: -200px;
+    }
+}
+.fixed:hover{
+    left: 0;
+    cursor: pointer;
+    color: #fff;
+}
