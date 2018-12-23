@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.cool{
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.curry{
+    height: 320px;
+    width: 320px;
+    transform-style: preserve-3d;
+    animation: rotating 4s ease;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: relative;
+}
+.curry div{
+    height: 320px;
+    width: 320px;
+    position: absolute;
+    opacity: 0.8;
+    overflow: hidden;
+    transition: all 1.2s;
+}
+.curry div img{
+    width: 100%;
+}
+.top{
+    transform: rotateX(90deg) translateZ(160px);
+}
+.face{
+    transform: translateZ(160px);
+}
+.back{
+    transform: translateZ(-160px);
+}
+.bottom{
+    transform: rotateX(90deg) translateZ(-160px);
+}
+.left{
+    transform: rotateY(90deg) translateZ(160px);
+}
+.right{
+    transform: rotateY(90deg) translateZ(-160px);
+}
+.curry:hover{
+    cursor: pointer;
+}
+.curry:hover .top{
+    transform: rotateX(90deg) translateZ(320px);
+}
+.curry:hover .face{
+    transform: translateZ(320px);
+}
+.curry:hover .back{
+    transform: translateZ(-320px);
+}
+.curry:hover .bottom{
+    transform: rotateX(90deg) translateZ(-320px);
+}
+.curry:hover .left{
+    transform: rotateY(90deg) translateZ(320px);
+}
+.curry:hover .right{
+    transform: rotateY(90deg) translateZ(-320px);
+}
+@keyframes rotating{
+    from{
+        transform: rotateX(0) rotateY(0);
+    }
+    to{
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
